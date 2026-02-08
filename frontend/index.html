@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>My Cinema</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-section="movies">Films</a></li>
+                <li><a href="#" class="nav-link" data-section="rooms">Salles</a></li>
+                <li><a href="#" class="nav-link" data-section="screenings">Séances</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header class="header">
+                <h2 id="section-title">Gestion des Films</h2>
+                <button class="btn btn-primary" id="add-btn">+ Ajouter</button>
+            </header>
+            <section id="movies-section" class="section active">
+                <div class="table-container">
+                    <table id="movies-table">
+                        <thead>
+                            <tr>
+                                <th>Titre</th>
+                                <th>Réalisateur</th>
+                                <th>Genre</th>
+                                <th>Durée</th>
+                                <th>Année</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="movies-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="rooms-section" class="section">
+                <div class="table-container">
+                    <table id="rooms-table">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Type</th>
+                                <th>Capacité</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rooms-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="screenings-section" class="section">
+                <div class="filters">
+                    <input type="date" id="filter-date" placeholder="Filtrer par date">
+                    <select id="filter-movie">
+                        <option value="">Tous les films</option>
+                    </select>
+                </div>
+                <div class="table-container">
+                    <table id="screenings-table">
+                        <thead>
+                            <tr>
+                                <th>Film</th>
+                                <th>Salle</th>
+                                <th>Date et Heure</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="screenings-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Ajouter un film</h2>
+            <form id="modal-form">
+                <div id="form-fields">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancel-btn">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

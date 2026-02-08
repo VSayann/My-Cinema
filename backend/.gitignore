@@ -1,0 +1,12 @@
+.env
+
+*.local.php
+config.local.php
+
+*.log
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
