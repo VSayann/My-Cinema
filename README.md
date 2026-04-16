@@ -1,5 +1,3 @@
-# My cinéma
-
 # Epitech - Projet 4 : My Cinema
 *26/01/2026 - 08/02/2026*
 
